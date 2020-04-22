@@ -1,0 +1,11 @@
+<!-- OLD WAY - Hard-coding path 
+<% @posts.each do |post| %>
+  <div><a href='<%= "/posts/#{post.id}" %>'><%= post.title %></a></div>
+<% end %>
+-->
+
+
+<!-- NEW WAY - WITH ROUTE HELPER -->
+<% @posts.each do |post| %>
+  <div><%= link_to post.title, "/posts/#{post.id}" %></div>
+<% end %>
